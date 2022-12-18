@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Siebe Demetser</title>
   <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" media="all" />
+  <script src="./js/jquery.slim.min.js"></script>
+  <!-- <script src="./js/popper.min.js"></script> -->
   <script src="../js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -49,8 +51,32 @@
     </nav>
   </header>
   <main>
-    <h1>Contact</h1>
-    <form action="../post-demo.php" method="post">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <h1>Contact</h1>
+          <form>
+            <div class="form-outline mt-4">
+              <input type="text" class="form-control" placeholder="Naam" aria-label="Naam" aria-describedby="ContactName">
+            </div>
+            <div class="form-outline mt-4">
+              <input type="text" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="E-mail">
+            </div>
+            <div class="form-outline mt-4">
+              <textarea class="form-control" placeholder="Uw bericht" aria-label="bericht" aria-describedby="bericht"></textarea>
+            </div>
+            <div class="form-outline mt-4">
+              <input class="form-check-input" type="checkbox" value="" id="contactCheckbox" checked />
+            </div>
+          </form>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+    
+
+    <!-- <form action="../post-demo.php" method="post">
         <label for="firstName">Voornaam</label>
         <input type="text" name="Voornaam" id="firstName" /><br />
         <label for="lastName">Familienaam</label>
@@ -75,7 +101,7 @@
       <label for="newsletter">Ik ga akkoord met de algemene voorwaarden</label>
       <br /><br/>
       <input type="submit" value="Verstuur" />
-    </form>
+    </form> -->
   </main>
   <footer>
     <ul class="linksFooter">

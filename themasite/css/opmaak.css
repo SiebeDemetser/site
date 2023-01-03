@@ -111,6 +111,10 @@ nav a {
 .card {
     width: 30%;
     margin-bottom: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #fff;
 }
 
 .card img {
@@ -120,7 +124,11 @@ nav a {
 
 .card h3 {
     margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1.25rem;
     text-align: center;
+    color: #222;
+    background-color: #f3f3f3;
 }
 
 @media (max-width: 1000px) {

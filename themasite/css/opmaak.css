@@ -5,6 +5,7 @@ nav {
     background-color: #f3f3f3;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .nav-toggle {
@@ -109,7 +110,7 @@ nav a {
 }
 
 .card {
-    width: 30%;
+    width: 18%;
     margin-bottom: 2rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
@@ -141,4 +142,98 @@ nav a {
     .card {
         width: 100%;
     }
+}
+
+details {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 16px 0;
+    padding: 16px;
+  }
+  
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  details[open] summary::before {
+    content: '- ';
+  }
+  
+  details summary::before {
+    content: '+ ';
+  }
+
+details {
+    display: none;
+}
+
+.card-button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.card-button:hover {
+    background-color: #444;
+}
+
+
+
+
+
+footer {
+    background-color: #f3f3f3;
+    color: #999;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    padding: 2rem;
+}
+
+.footer-links {
+    text-align: center;
+}
+
+.footer-links h4 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.footer-links p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a {
+    color: #999;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #222;
+}
+
+.copyright {
+    margin: 0;
+    padding: 1rem;
+    font-size: 0.75rem;
+    text-align: center;
 }

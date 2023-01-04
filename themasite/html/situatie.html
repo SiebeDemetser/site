@@ -7,6 +7,7 @@
   <title>Lift aansturing</title>
   <link rel="stylesheet" href="../css/opmaak.css" type="text/css">
   <link rel="stylesheet" href="../../fontawesome-free-6.2.1-web/css/all.css">
+  <link rel="stylesheet" href="../css/situatie.css">
 </head>
 
 <body>
@@ -24,6 +25,7 @@
     </nav>
   </header>
   <main>
+    <h1>Arduino liftaansturing</h1>
     <section class="text">
       <h2>Introductie</h2>
       <p>
@@ -54,6 +56,34 @@
         We hebben besloten om bij de opstart van de arduino sowieso een autohome laten uitvoeren. 
         Bij de opstart kan je 2 contacten kortsluiten om de lift in debug modus te zetten. Hierbij krijg je de laatste 10 errorcodes te zijn. (deze zijn opgeslagen in het EEPROM geheugen)
       </p>
+    </section>
+    <section class="photos">
+      <img src="../media/images/322839516_562042415777583_7394180684944140106_n.jpg" alt="schacht">
+      <img src="../media/images/323532498_3374347212833079_1083433732338131140_n.jpg" alt="gewicht">
+    </section>
+    <section class="text">
+      <h2>werking</h2>
+      <p>
+        Elk verdiep krijgt 2 drukknoppen. Eén om de lift naar het verdiep van oproep te sturen en één om de lift naar de kelder te sturen.
+        In de kelder staat er een drukknop voor elk verdiep. De kelder is het enige verdiep die een lcd scherm heeft. Hier komen enkele gegevens op zoals:
+      </p>
+      <ul>
+        <li>huidig verdiep</li>
+        <li>bestemming van de lift</li>
+        <li>een melding dat de lift in beweging is</li>
+        <li>error codes indien nodig.</li>
+        <li>geeft aan wanneer er een autohome bezig is</li>
+        <li>elke stap van de opstart clyclus</li>
+      </ul>
+      <p>
+        De volledige lift word bediend door een arduino mega. Aangezien deze werkt op 5 volt hebben we enkele tussencomponenten nodig om naar 24V te gaan.
+        Dit is nodig door het verlies op de lengte van de kabels in de liftschacht. Voor de inputs maken we gebruik van optocouplers en voor de outputs relais.
+        Voor het aansturen van de motor gebruiken we een swaardere relais dan de rest alsook een motorbeveiliging.
+      </p>
+    </section>
+    <section class="photos">
+      <img src="../media/images/IMG_20221229_180719.jpg" alt="kastInOpbouw">
+      <img src="../media/images/IMG_20221231_111904.jpg" alt="kastBijAansluiting">
     </section>
   </main>
   <footer>

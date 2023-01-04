@@ -6,6 +6,7 @@ nav {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
     position: relative;
     margin-bottom: 2rem;
+    z-index: 2;
 }
 
 .nav-toggle {
@@ -183,6 +184,7 @@ details {
 pre {
     font-family: monospace;
     overflow: auto;
+    z-index: 1;
   }
   
   @media screen and (max-width: 600px) {

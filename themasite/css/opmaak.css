@@ -182,7 +182,14 @@ details {
 
 pre {
     font-family: monospace;
-}
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 600px) {
+    pre {
+      width: 100%;
+    }
+  }
 
 
 

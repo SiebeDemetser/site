@@ -181,18 +181,6 @@ details {
     background-color: #444;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-@media screen and (max-width: 600px) {
-    .container {
-        justify-content: flex-start;
-    }
-}
-
 pre {
     font-family: monospace;
     overflow: auto;
@@ -200,12 +188,37 @@ pre {
     width: 90%;
 }
 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (min-width: 600px) {
     pre {
-        width: 100%;
+        display: flex;
+    }
+    .mobile {
+        display: none;
     }
 }
 
+@media screen and (max-width: 600px) {
+    pre {
+        display: none;
+    }
+    .mobile {
+        display: flex;
+        width: 50%;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        justify-content: flex-start;
+    }
+}
 
 footer {
     background-color: #f3f3f3;

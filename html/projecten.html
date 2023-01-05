@@ -97,7 +97,6 @@
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownArduino">
                   <a class="dropdown-item" href="#" data-bs-toggle="collapse" data-bs-target="#Carduino">Carduino</a>
-                  <a class="dropdown-item" href="#" data-bs-toggle="collapse" data-bs-target="#EthernetTester">ethernet tester</a>
                   <a class="dropdown-item" href="../themasite/html/situatie.html" target="_blank">Lift aansturing</a>
                 </div>
               </div>
@@ -117,8 +116,8 @@
                   Projecten
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownRaspberry">
-                  <a class="dropdown-item" href="#">Alarmsysteem</a>
-                  <a class="dropdown-item" href="#">Domotica</a>
+                  <a class="dropdown-item" href="#" data-bs-toggle="collapse" data-bs-target="#Alarmsysteem">Alarmsysteem</a>
+                  <a class="dropdown-item" href="#" data-bs-toggle="collapse" data-bs-target="#Domotica">Domotica</a>
                 </div>
               </div>
             </div>
@@ -132,7 +131,7 @@
             </div>
             <div class="card-body">
               <h4 class="card-title">windows</h4>
-              <a href="#" class="btn btn-primary">meer info</a>
+              <a href="#" data-bs-toggle="collapse" data-bs-target="#BIG" class="btn btn-primary">meer info</a>
             </div>
           </div>
         </div>
@@ -246,69 +245,83 @@
           </div>
         </div>
       </div>
-      <div id="#EthernetTester" class="collapse row">
+
+      <!--Raspberry-->
+      <div id="Alarmsysteem" class="collapse row">
         <div class="col">
           <div class="card card body">
             <div class="container">
               <div class="row">
                 <div class="col">
-                  <h2>Ethernetkabel tester</h2>
-                  <p>Voor dit project heb ik 2 printplaaten vool elk uiteinde van een ethernet kabel. Langs de ene kant heb je een
-                    arduino shield en langs de andere kant een simpele printplaat met led.
-                    de arduino stuurt via de shield 1 voor 1 een signaal over de kabel. als de corespondeerende ledjes aan de andere
-                    kant oplichten is de kabel goed.
+                  <h2>Smart alarmsysteem</h2>
+                  <p>Het project werkt zoals een modern alarmsysteem. Door middel van een web interface kan je gegevens vragen van
+                    de
+                    alarmgeschiedenis via smartphone of webbrowser. Je kan ook via de website zonder veel moeite bepaalde sensoren
+                    en de
+                    configuratie van het systeem aanpassen. Mocht je interesse hebben in de werking kan je een kijkje nemen naar de
+                    links onder de afbeeldingen.
                   </p>
                 </div>
               </div>
               <div class="row">
                 <div class="col">
-                  <img style="max-width: 400px;" width="100%" class="img-fluid" src="../media/images/EthernetKabelTester.png" alt="screenshot2 van de app">
+                  <img style="max-width: 400px;" width="100%" class="img-fluid" src="../media/images/blokdiagramAlarm.png" alt="blokdiagram alarm">
+                </div>
+                <div class="col">
+                  <img style="max-width: 400px;" width="100%" class="img-fluid" src="../media/images/hardwareAlarm.png" alt="hardware alarm">
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <div id="Domotica" class="collapse row">
+        <div class="col">
+          <div class="card card body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h2>aansturing licht en gordijnen</h2>
+                  <p>Helaas heb ik hier geen beeldmateriaal meer van. Dit was een eenvoudig python programma dat op een Raspberry pi
+                    draait. Deze kon je oproepen via een lokale webpagina.
+                    De lichten en gordijnen werden bediend via de gpio pinnen van de Raspberry. Dit project is gemaakt in het
+                    secundair onderwijs en is nooit verder gegaan dan een test opstelling.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Windows-->
+      <div id="BIG" class="collapse row">
+        <div class="col">
+          <div class="card card body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h2>Body Interaction Game</h2>
+                  <p>Dit project was mijn GIP uit 6TSO. De bedoeling was om een game te maken waar je niks moest aanraken om het te
+                    spelen.
+                    We hebben hiervoor een xbox kinect 360 aangesloten op een windows 7 systeem met unity op geinstalleert.
+                    We hebben hiervoor al een website gemaakt. Dus kan je alles over dit project <a
+                      href="https://www.depov.be/GIP">hier</a> terugvinden
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <video width="100%" class="embed-responsive-item mx-auto d-block"
+                    src="../media/videos/gip-video.m4v" type="video/mp4" controls></video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-
-    <h2>Raspberry pi</h2>
-    <button type="button" class="collapsible">alarm systeem</button>
-    <section class="content">
-      <p>Het project werkt zoals een modern alarmsysteem. Door middel van een web interface kan je gegevens vragen van
-        de
-        alarmgeschiedenis via smartphone of webbrowser. Je kan ook via de website zonder veel moeite bepaalde sensoren
-        en de
-        configuratie van het systeem aanpassen. Mocht je interesse hebben in de werking kan je een kijkje nemen naar de
-        links onder de afbeeldingen.</p>
-      <img height="500" src="../media/images/blokdiagramAlarm.png" alt="blokdiagram alarm">
-      <img height="500" src="../media/images/hardwareAlarm.png" alt="hardware alarm">
-      <p><a href="../media/HouseAlarmText.pdf">Volledig verslag house alarm</a></p>
-      <p><a href="https://github.com/ArnoudSerruys/HouseAlarm">Github house alarm link</a></p>
-    </section>
-    <button type="button" class="collapsible">aansturing licht en gordijnen</button>
-    <section class="content">
-      <p>Helaas heb ik hier geen beeldmateriaal meer van. Dit was een eenvoudig python programma dat op een Raspberry pi
-        draait. Deze kon je oproepen via een lokale webpagina.
-        De lichten en gordijnen werden bediend via de gpio pinnen van de Raspberry. Dit project is gemaakt in het
-        secundair onderwijs en is nooit verder gegaan dan een test opstelling.
-      </p>
-    </section>
-
-    <h2>Windows</h2>
-    <button type="button" class="collapsible">Body Interaction Game</button>
-    <section class="content">
-      <p>Dit project was mijn GIP uit 6TSO. De bedoeling was om een game te maken waar je niks moest aanraken om het te
-        spelen.
-        We hebben hiervoor een xbox kinect 360 aangesloten op een windows 7 systeem met unity op geinstalleert.
-        We hebben hiervoor al een website gemaakt. Dus kan je alles over dit project <a
-          href="https://www.depov.be/GIP">hier</a> terugvinden
-      </p>
-      <video src="../media/videos/gip-video.m4v"></video>
-    </section><br>
   </main>
+
   <footer class="bg-dark text-center text-white mt-5">
     <div class="container p-4 pb-0">
       <section class="mb-4">

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css" media="all" />
   <link rel="stylesheet" href="../fontawesome-free-6.2.1-web/css/all.min.css">
   <script src="../js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </head>
 
 <body>
@@ -95,9 +96,9 @@
                   Projecten
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownArduino">
-                  <a class="dropdown-item" href="#">Carduino</a>
-                  <a class="dropdown-item" href="#">Lift aansturing</a>
-                  <a class="dropdown-item" href="#">ethernet tester</a>
+                  <a class="dropdown-item" href="#" data-bs-toggle="collapse" data-bs-target="#Carduino">Carduino</a>
+                  <a class="dropdown-item" href="#" data-bs-toggle="collapse" data-bs-target="#EthernetTester">ethernet tester</a>
+                  <a class="dropdown-item" href="../themasite/html/situatie.html" target="_blank">Lift aansturing</a>
                 </div>
               </div>
             </div>
@@ -141,6 +142,7 @@
 
 
     <div class="container">
+      <!--Android-->
       <div id="CarFinder" class="collapse row">
         <div class="col">
           <div class="card card body">
@@ -214,7 +216,6 @@
                     de mol klikt voordat hij weg is.
                     De punten zijn ook zeer eenvoudig. Elke hit is een punt.
                   </p>
-
                 </div>
               </div>
               <div class="row">
@@ -227,92 +228,51 @@
           </div>
         </div>
       </div>
-
-
-    </div>
-
-
-
-    <div class="container">
-      <div class="row">
+      <!--Arduino-->
+      <div id="Carduino" class="collapse row">
         <div class="col">
-          <div class="collapse multi-collapse mt-3" id="CarFinder">
-
-          </div>
-        </div>
-        <div class="col">
-          <div class="collapse multi-collapse mt-3" id="spaceInvader">
-
-
+          <div class="card card body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h2>Carduino</h2>
+                  <p>Helaas heb ik hier geen beeldmateriaal meer van. Dit was een zeer typisch carduino projectje. 
+                    De arduino stuurde dc motors en een servo motor om te sturen. als input had de arduino een HC05 bluetooth module. 
+                    Voor de app hebben we gebruik gemaakt van MIT app inventor ook wel gekent als Scratch voor android.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div id="#EthernetTester" class="collapse row">
+        <div class="col">
+          <div class="card card body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h2>Ethernetkabel tester</h2>
+                  <p>Voor dit project heb ik 2 printplaaten vool elk uiteinde van een ethernet kabel. Langs de ene kant heb je een
+                    arduino shield en langs de andere kant een simpele printplaat met led.
+                    de arduino stuurt via de shield 1 voor 1 een signaal over de kabel. als de corespondeerende ledjes aan de andere
+                    kant oplichten is de kabel goed.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <img style="max-width: 400px;" width="100%" class="img-fluid" src="../media/images/EthernetKabelTester.png" alt="screenshot2 van de app">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <h1>Projecten</h1>
-    <p>Ik heb ondertussen al enkele projecten achter de rug. Sommige afgewerkt andere iets minder.
-      Buiten het maken van enkele projecten hou ik mij ook bezig met het herstellen van electro zoals gsm’s en
-      computers.
-      Dit om e-waste te beperken. Ik ga niet beginnen met elke gsm die ik hersteld heb op te sommen aangezien dit er
-      zeker al
-      meer dan 100 zijn. Onderstaand ga ik wel mijn andere projecten opsommen.</p>
 
-    <h2>Android apps:</h2>
-    <button type="button" class="collapsible">car finder</button>
-    <section class="content">
-      <p>Helaas is deze gemaakt voor een oudere android versie. Waardoor ik enkel een screenshot kan toevoegen.<br>
-        Deze app heeft als bedoeling dat je jouw auto altijd kan terug vinden. Wanneer je parkeert klik je "onthoud mijn
-        huidige locatie"<br>
-        Als je daarna de weg terug wilt vinden kan je op de knop "toon route" klikken. Deze zal dan via een google maps
-        api de route naar jouw auto tonen.</p>
-      <img height="800" src="../media/images/findMyCar.jpg" alt="screenshot van de app">
-    </section>
-    <button type="button" class="collapsible">space invader</button>
-    <section class="content">
-      <p>Deze app is om de gyroscope sensor te testen. Je beweegt de raket door naar links en rechts te draaien met de
-        gsm.
-        En schieten is simpelweg door op het scherm te tikken. De ufo gaat met een oneindige loop van links naar recht.
-        De punten zijn heel eenvoudig per hit krijg je een punt.</p>
-      <video height="800" src="../media/videos/spaceInvader.mp4" type="video/mp4" controls></video>
-    </section>
-    <button type="button" class="collapsible">whack a mole</button>
-    <section class="content">
-
-    </section>
-
-    <h2>Arduino:</h2>
-    <button type="button" class="collapsible">bluetooth controller voor arduino auto</button>
-    <p class="content">Helaas heb ik hier geen beeldmateriaal meer van. Dit was een zeer typisch carduino projectje.
-      De arduino stuurde dc motors en een servo motor om te sturen. als input had de arduino een HC05 bluetooth module.
-      Voor de app hebben we gebruik gemaakt van MIT app inventor ook wel gekent als Scratch voor android.
-    </p>
-    <button type="button" class="collapsible">lift aansturing</button>
-    <section class="content">
-      <p>Dit is momenteel mijn meest recent project. De bedoeling is dat ik een aansturing maak voor een kleine
-        goederenlift.
-        Het gaat hier om een oude goederenlift (zie foto) die manueel bediend moest worden. Bij het vernieuwen van de
-        kabel hebben we besloten om Deze volledig te automatiseren.</p>
-      <img height="500" src="../media/images/liftSchaarbeek/cabine.jpg" alt="foto van lift cabine">
-      <p>Het is de bedoeling dat deze lift vanuit de kelder naar 4 verschillende verdiepen gaat.
-        Elk verdiep zal een call en een send button hebben. In de kelder is het iets anders. Hier zal er ook een call
-        button zijn maar ook 4 knoppen om de lift naar elk verdiep te sturen.
-        Er zal ook een beveiliging opstaan. Als de deuren open zijn zal de lift niet bewegen. En als de lift te hoog of
-        te laag komt zal deze afspringen.
-        Daarnaast komt er ook een motorbeveiliging op te staan. Op elk verdiep zullen er 2 lampen staan. Een groene om
-        aan te duiden dat de lift op jouw verdiep is. En een rode om aan te tonen dat de lift in beweging is.
-        Als de rode lamp knippert staat de lift in foutcode.
-      </p>
-      <p>Hier komt meer tekst en foto's eens het systeem verder af is.</p>
-    </section>
-    <button type="button" class="collapsible">ethernet tester</button>
-    <section class="content">
-      <p>Voor dit project heb ik 2 printplaaten vool elk uiteinde van een ethernet kabel. Langs de ene kant heb je een
-        arduino shield en langs de andere kant een simpele printplaat met led.
-        de arduino stuurt via de shield 1 voor 1 een signaal over de kabel. als de corespondeerende ledjes aan de andere
-        kant oplichten is de kabel goed.
-      </p>
-      <img height="500" src="../media/images/EthernetKabelTester.png" alt="foto van ethernet tester">
-    </section>
 
     <h2>Raspberry pi</h2>
     <button type="button" class="collapsible">alarm systeem</button>

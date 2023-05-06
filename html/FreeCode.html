@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Python Code Example</title>
+  </head>
+  <body>
+    <h1>My Python Code</h1>
+    <pre>
+      <code>
+from csv import reader
+from urllib.request import urlopen
+import codecs
+from functional import seq
+
+class CoasterLezer:
+  
+  def __isfloat(self, string):
+      try:
+          float(string)
+          return True
+      except ValueError:
+          return False
+  
+  def __convert_to_float(self, waarde_string):
+    waarde_decimal = waarde_string.replace(",", ".")
+    if (self.__isfloat(waarde_decimal)):
+      return float(waarde_decimal)
+    else:
+      return None
+        
+  def __convert_to_int(self, waarde_string):
+    waarde_decimal = waarde_string.replace(",", ".")
+    if (waarde_decimal.isnumeric()):
+      return int(waarde_decimal)
+    else:
+     return None
+  
+  def __convert_types(self, rollercoaster):
+    typed_rollercoaster = rollercoaster.copy()
+    typed_rollercoaster.update(
+      {  
+        "inversies": 
+          typed_rollercoaster["inversies"] == "Yes",
+        "snelheid": 
+          self.__convert_to_float(typed_rollercoaster["snelheid"]),
+        "hoogte":
+          self.__convert_to_float(typed_rollercoaster["hoogte"]),
+        "lengte": 
+          self.__convert_to_float(typed_rollercoaster["lengte"]),
+        "g_kracht": 
+          self.__convert_to_float(typed_rollercoaster["g_kracht"]),
+        "aantal_inversies": 
+          self.__convert_to_int(typed_rollercoaster["aantal_inversies"]),
+        "duur": 
+          self.__convert_to_int(typed_rollercoaster["duur"]),
+        "openingsjaar": 
+          self.__convert_to_int(typed_rollercoaster["openingsjaar"])
+      }
+    )
+    return typed_rollercoaster
+ 
+  def lees_url(self, url):
+    response = urlopen(url)
+    csv_reader = reader(
+      codecs.iterdecode(response, "utf-8"), delimiter="\t")
+    
+    titels = next(csv_reader)
+    materiaal_index = titels.index("Materiaal")
+    del(titels[materiaal_index])
+
+    titels = seq(titels)\
+      .map(lambda t : t.lower())\
+      .map(lambda t : t.replace('-', '_'))\
+      .map(lambda t : t.replace(' ', '_'))
+
+    gegevens = []
+    for lijn in csv_reader:
+      del(lijn[materiaal_index])
+      gegevens.append(lijn)
+      
+    gegevens = seq(gegevens)\
+      .map(lambda lijn: dict(zip(titels, lijn)))\
+      .map(self.__convert_types)
+    
+    return titels, gegevens
+      </code>
+    </pre>
+  </body>
+</html>
